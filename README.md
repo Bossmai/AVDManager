@@ -1,0 +1,3 @@
+AVDManager
+========
+Manager for AVDs.
