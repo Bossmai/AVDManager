@@ -1,2 +1,3 @@
 [sdk]
-path=C:\Users\liashi\AppData\Local\Android\sdk\add-ons\addon-google_apis-google-17\images\armeabi-v7a\system.img
+emulator_path=/Users/Alfred/Desktop/emulator64-x86
+system_img_path=/Users/Alfred/Library/Android/sdk/system-images/android-21/google_apis/x86/system.img
