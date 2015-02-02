@@ -32,12 +32,14 @@ if __name__ == "__main__":
         emulator_name = configParser.get("sdk", "emulator_path")[configParser.get("sdk", "emulator_path").rindex(os.sep) + 1:]
         emulator_name_after = ""
 
-        shutil.copyfile(configParser.get("sdk", "emulator_path"), emulator_name)
-
         if platform.system() == "Windows":
             emulator_name_after = emulator_name[0: emulator_name.index("-")] + "-" + args.port + ".exe"
         elif platform.system() == "Linux":
             emulator_name_after = emulator_name[0: emulator_name.index("-")]  + "-" + args.port
+
+        shutil.copyfile(configParser.get("sdk", "emulator_path"), emulator_name_after)
+
+
 
         shutil.move(emulator_name, emulator_name_after)
 
