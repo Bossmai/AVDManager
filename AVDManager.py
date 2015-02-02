@@ -39,10 +39,6 @@ if __name__ == "__main__":
 
         shutil.copyfile(configParser.get("sdk", "emulator_path"), emulator_name_after)
 
-
-
-        shutil.move(emulator_name, emulator_name_after)
-
         if args.iemi:
             emulator_writer.write_iemi(emulator_name_after, args.iemi)
         if args.imsi:
