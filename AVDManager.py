@@ -45,11 +45,13 @@ if __name__ == "__main__":
             emulator_writer.write_imsi(emulator_name_after, args.imsi)
 
         shutil.move(emulator_name_after, configParser.get("sdk", "emulator_path")[0:configParser.get("sdk", "emulator_path").rindex(os.sep) + 1] + emulator_name_after)
-    #if args.buildprop:
+    if args.buildprop:
         #print platform.architecture()
         #extract the img file
-        #os.system("./libs/yaffs2utils/unyaffs2 -f " + "./output/" + system_img_name)
+        os.system("sudo unyaffs " + configParser.get("sdk", "system_img_path") + " " + "./systemimg")
+	os.remove("./systemimg/build.prop")
+	shutil.copyfile(args.buildprop, "./systemimg/build.prop")
 
         #overwrite the file
 
-        #pack the img
+        #pack the img`:`

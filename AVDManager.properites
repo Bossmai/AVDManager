@@ -1,3 +1,5 @@
 [sdk]
 emulator_path=C:\Users\liashi\AppData\Local\Android\sdk\tools\emulator-x86.exe
-system_img_path=C:\Users\liashi\AppData\Local\Android\sdk\system-images\android-21\default\x86_64\system.img
+system_img_path=/home/parallels/Desktop/system.img
+account=
+password=
